@@ -1,5 +1,5 @@
 count = 0
-sum = 0
+total = 0
 
 while True:
   sval = input("Enter a value: ")
@@ -13,6 +13,6 @@ while True:
     continue
 
   count += 1
-  sum += fval
+  total += fval
 
-print(sum, count, sum/count)
+print(total, count, total/count)

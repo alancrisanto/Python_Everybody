@@ -5,17 +5,17 @@ smallest = None
 while True:
     num = input("Enter a number: ")
     if num == "done":
-          break
+        break
     
     try:
         number = float(num)
     except:
         print("Invalid input")
         continue
-      
+    
     if smallest is None and largest is None:
-      smallest = number
-      largest = number
+        smallest = number
+        largest = number
     elif  number < smallest:
         smallest = number
     elif number > largest:
