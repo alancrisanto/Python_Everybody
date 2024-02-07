@@ -27,16 +27,21 @@ class TreeNode:
 """
 
 def find_max(root):
-    arr = list()
-
-    arr.append(root.value)
-    arr.append(find_max(root.left))
-    arr.append(find_max(root.right))
-
-    return max(arr)
-
-arr = [-3, 0]
-print(max(arr))
+    if root is None:
+        return None
+    left_max = find_max(root.left)
+    right_max = find_max(root.right)
+    
+    values = list()
+    
+    if root.value is not None:
+        values.append(root.value)
+    if left_max is not None:
+        values.append(left_max)
+    if right_max is not None:
+        values.append(right_max)
+    
+    return max(values)
 
 """
 Clever Solutions
