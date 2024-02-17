@@ -12,6 +12,7 @@
 def persistence (num):
   count = 0
   
+  # begins in 10 because is the first number  with 2 digits
   while num >=10:
     mult = 1
     for n in str(num):

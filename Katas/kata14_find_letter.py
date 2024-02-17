@@ -28,26 +28,20 @@ find_occurrences("An APPLE a day keeps an Archeologist AWAY...", "A") ➞ {
 
 def find_occurrences(txt, letter):
   mydict = dict()
-  count = 0
-  arr = txt.split()
+  arr = txt.lower().split()
 
   for x in arr:
-    for y in x:
-      if letter.lower() == y.lower():
-        count +=1
-        mydict[x.lower()] = count
-      else:
-        mydict[x.lower()] = count
-    count = 0
+    mydict[x] = x.count(letter.lower())
+
 
   print(mydict)
 
-find_occurrences("a function create juice", "c")
+find_occurrences("An APPLE a day keeps an Archeologist AWAY...", "A")
 
-def find_occurrences(txt, search_char):
-  a = txt.lower().split()
-  dic = {}
-  for word in a:
-    for char in word:
-      dic[word] = word.count(search_char.lower()) 
-  return dic
+# def find_occurrences(txt, search_char):
+#   a = txt.lower().split()
+#   dic = {}
+#   for word in a:
+#     for char in word:
+#       dic[word] = word.count(search_char.lower()) 
+#   return dic

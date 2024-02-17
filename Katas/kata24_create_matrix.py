@@ -18,8 +18,6 @@ Some examples:
 
 def get_matrix(n):
 
-  # print(matrix[2][2])
-
   matrix = list()
 
   for x in range(n):

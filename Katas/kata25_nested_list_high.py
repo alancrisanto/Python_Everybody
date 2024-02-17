@@ -39,3 +39,23 @@ def list_depth(lst):
     return 1 + max(sub_list_depth, default=0)
 
 print(list_depth([2, "yes", [True, False]]))
+
+
+"""
+01----------------------------------------------------------------
+def list_depth(l):
+    depths = [1]
+    for x in l:
+        if isinstance(x, list):
+            depths.append(list_depth(x) + 1)
+    return max(depths)
+
+02 ----------------------------------------------------------------
+def list_depth(l):
+    if l == []:
+        return 1
+    if isinstance(l, list):
+        return 1 + max(list_depth(item) for item in l)
+    else:
+        return 0
+"""

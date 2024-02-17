@@ -12,7 +12,6 @@ def solution(s):
   for x in s:
     if x == x.upper():
       txt += " " + x
-      print(x)
     else:
       txt += x
   return txt
