@@ -13,3 +13,4 @@ except:
 for line in fh:
   line = line.rstrip()
   print(line.upper())
+
